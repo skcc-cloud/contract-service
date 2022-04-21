@@ -1,10 +1,10 @@
-package com.demo.petstore;
+package com.contract;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PetstoreApplicationTests {
+class ContractApplicationTests {
 
 	@Test
 	void contextLoads() {
