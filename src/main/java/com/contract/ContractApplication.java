@@ -2,7 +2,7 @@ package com.contract;
 
 import com.contract.domain.Contract;
 import com.contract.domain.Location;
-import com.contract.domain.Repository;
+import com.contract.domain.ContractRepository;
 
 
 import org.springframework.boot.SpringApplication;
@@ -20,7 +20,7 @@ public class ContractApplication {
 	public static void main(String[] args) {
 		applicationContext = SpringApplication.run(ContractApplication.class, args);
 
-		Repository repository = applicationContext.getBean(Repository.class);
+		ContractRepository repository = applicationContext.getBean(ContractRepository.class);
 
 		Contract contract = new Contract();
 		contract.setLocation(Location.판교);

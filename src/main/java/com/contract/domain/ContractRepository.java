@@ -2,6 +2,6 @@ package com.contract.domain;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface Repository extends JpaRepository<Contract, Long>{
+public interface ContractRepository extends JpaRepository<Contract, Long>{
     
 }
