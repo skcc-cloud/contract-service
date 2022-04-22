@@ -1,17 +1,15 @@
-package com.example.contract;
+package com.contract;
 
-import com.example.contract.kafka.KafkaProcessor;
+import com.contract.kafka.KafkaProcessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
 import org.springframework.messaging.MessageChannel;
 import org.springframework.messaging.MessageHeaders;
 import org.springframework.messaging.support.MessageBuilder;
-import org.springframework.util.MimeTypeUtils;
 import org.springframework.transaction.support.TransactionSynchronizationAdapter;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import org.springframework.util.MimeTypeUtils;
 
 public class AbstractEvent {
 
@@ -44,7 +42,7 @@ public class AbstractEvent {
             /**
              * spring streams 방식
              */
-            KafkaProcessor processor = PetApplication.applicationContext.getBean(KafkaProcessor.class);
+            KafkaProcessor processor = ContractApplication.applicationContext.getBean(KafkaProcessor.class);
             MessageChannel outputChannel = processor.outboundTopic();
 
             outputChannel.send(MessageBuilder

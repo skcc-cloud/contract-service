@@ -1,6 +1,6 @@
-package com.example.contract.domain;
+package com.contract.domain;
 
-import com.example.contract.AbstractEvent;
+import com.contract.AbstractEvent;
 
 public class ContractReserved extends AbstractEvent {
     Long id;

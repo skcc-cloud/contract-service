@@ -1,6 +1,6 @@
-package com.example.contract.domain;
+package com.contract.domain;
 
-import com.example.contract.domain.ContractReserved;
+import com.contract.domain.ContractReserved;
 
 public class ContractUpdated extends ContractReserved{
     
